@@ -1,0 +1,52 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	-webkit-animation: colorchange 50s;
+    animation: colorchange 50s;
+}
+
+.container {
+	margin: auto;
+}
+
+.container::after {
+	content:"";
+	display: block;
+	padding-top: 100%;
+}
+
+@keyframes colorchange {
+	0%   {background: red;}
+	25%  {background: yellow;}
+	50%  {background: blue;}
+	75%  {background: green;}
+	100% {background: red;}
+}
+
+@-webkit-keyframes colorchange {
+	0%   {background: red;}
+	25%  {background: yellow;}
+	50%  {background: blue;}
+	75%  {background: green;}
+	100% {background: red;}
+}
+
+
+#clock {
+	color: white;
+	display: block;
+	font-size: 5em;
+	font-family: Papyrus;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
