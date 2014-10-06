@@ -18,3 +18,5 @@ function refreshClock ()
   document.getElementById("clock").firstChild.nodeValue = currentTimeString;
 
 }
+
+
