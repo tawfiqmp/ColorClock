@@ -11,11 +11,6 @@ function app () {
 
 	  var time2 = parts.map();
 
-<<<<<<< HEAD
-}
-
-
-=======
 	//
 	  var currentHours = currentTime.getHours ( );
 	  var currentMinutes = currentTime.getMinutes ( );
@@ -40,5 +35,4 @@ function app () {
 	}
 
 
-}	
->>>>>>> gh-pages
+}
