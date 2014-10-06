@@ -1,20 +1,35 @@
-function refreshClock ()
-{
-  var currentTime = new Date ( );
+window.onload = app;
 
-//
-  var currentHours = currentTime.getHours ( );
-  var currentMinutes = currentTime.getMinutes ( );
-  var currentSeconds = currentTime.getSeconds ( );
+function app () {
+	"use strict";
 
-// padding seconds & minutes with zeros in the front
-  currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
-  currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
 
-// string for the display
-  var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
+	  function refreshClock () {
+		"use strict";
+	  var currentTime = new Date ( );
 
-  // display the updated time
-  document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+	//
+	  var currentHours = currentTime.getHours ( );
+	  var currentMinutes = currentTime.getMinutes ( );
+	  var currentSeconds = currentTime.getSeconds ( );
 
-}
+	// padding seconds & minutes with zeros in the front
+	  currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+	  currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+
+	// string for the display
+	  var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
+
+	 // display the updated time
+	  document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+
+	}
+
+	{
+
+
+
+	}
+
+
+}	
