@@ -3,10 +3,13 @@ window.onload = app;
 function app () {
 	"use strict";
 
-
-	  function refreshClock () {
+	 function refreshClock () {
 		"use strict";
-	  var currentTime = new Date ( );
+	  var currentTime = new Date ();
+
+	  var time = [getHours, getMinutes, getSeconds]
+
+	  var time2 = parts.map();
 
 	//
 	  var currentHours = currentTime.getHours ( );
