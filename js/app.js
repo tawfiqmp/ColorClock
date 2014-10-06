@@ -17,5 +17,4 @@ function refreshClock ()
   // display the updated time
   document.getElementById("clock").firstChild.nodeValue = currentTimeString;
 
-
 }
