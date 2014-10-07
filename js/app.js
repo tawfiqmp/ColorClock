@@ -19,7 +19,7 @@ function app() {
 
 
         // changing background color with converting time to RGB
-        body.style['background-color'] =
+        body.style.backgroundColor =
             "rgb(" +
             convertRGB(newTime).join(',') +
             ")";
