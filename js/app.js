@@ -1,31 +1,34 @@
 window.onload = app;
 
-function app () {
-	"use strict";
+function app() {
+    "use strict";
 
-	 function refreshClock () {
-		"use strict";
-	  var currentTime = new Date ();
 
-	  var time = [getHours, getMinutes, getSeconds]
+    function refreshClock() {
+        "use strict";
+        var currentTime = new Date();
+        // getting the time from date function
+        var time = ['getHours', 'getMinutes', 'getSeconds'];
+        // making it so that the zeroes show up in front
+        var newTime = parts.map(function(timeFunction) {
+        	var value = currentTime.[timeFunction]();
+        	return value < 10 ? "0" + value + value;
+        });
 
-	  var time2 = parts.map();
+        //Join the numbers together with :
+        p.textContent = newTime.join(":");
 
-	//
-	  var currentHours = currentTime.getHours ( );
-	  var currentMinutes = currentTime.getMinutes ( );
-	  var currentSeconds = currentTime.getSeconds ( );
 
-	// padding seconds & minutes with zeros in the front
-	  currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
-	  currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+        // padding seconds & minutes with zeros in the front
+        currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+        currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
 
-	// string for the display
-	  var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
+        // string for the display
+        var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
 
-	 // display the updated time
-	  document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+        // display the updated time
+        document.getElementById("clock").firstChild.nodeValue = currentTimeString;
 
-	}
+    }
 
 }
