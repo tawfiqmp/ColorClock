@@ -18,17 +18,14 @@ function app() {
         //Join the numbers together with :
         p.textContent = newTime.join(":");
 
-
-        // padding seconds & minutes with zeros in the front
-        currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
-        currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
-
-        // string for the display
-        var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
-
-        // display the updated time
-        document.getElementById("clock").firstChild.nodeValue = currentTimeString;
-
     }
 
+body.style['background-color'] =
+	"rgb(" + convertRGB(newTime).join(',') + 
+	")";
+
+function 
+
+
+    setInterval(app, 1000);
 }
