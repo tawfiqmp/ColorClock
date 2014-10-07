@@ -11,21 +11,35 @@ function app() {
         var time = ['getHours', 'getMinutes', 'getSeconds'];
         // making it so that the zeroes show up in front
         var newTime = parts.map(function(timeFunction) {
-        	var value = currentTime.[timeFunction]();
-        	return value < 10 ? "0" + value + value;
+        	var value = currentTime[timeFunction]();
+        	return value < 10 ? "0" + value : value;
         });
 
         //Join the numbers together with :
-        p.textContent = newTime.join(":");
+        span.textContent = newTime.join(":");
 
-    }
-
-body.style['background-color'] =
-	"rgb(" + convertRGB(newTime).join(',') + 
+   
+// changing background color with converting time to RGB
+document.body.style.backgroundColor =
+	"rgb(" + 
+	convertRGB(newTime).join(',') + 
 	")";
 
-function 
+	}	
+function convertRGB(name) {
 
+	var convert = [24, 60, 60],
+	result = [];
+
+	name.forEach(function(code, index) {
+		answer[index] = ~~ (code / convert[index] * 255)
+	});
+
+	return answer;
+}
+
+    var page = document.querySelector('body');
+    var span = document.querySelector('span');
 
     setInterval(app, 1000);
 }
