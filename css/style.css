@@ -11,7 +11,7 @@ body {
 	background-color: blue;
 	/*-webkit-animation: colorchange 50s;
     animation: colorchange 50s;*/
-    transition: all .25s ease
+    transition: all .25s ease;
     -webkit-transition: all .25s ease;
 }
 
@@ -29,22 +29,6 @@ body {
   	background: radial-gradient(gray);*/
 }
 
-/*@keyframes colorchange {
-	0%   {background: red;}
-	25%  {background: yellow;}
-	50%  {background: blue;}
-	75%  {background: green;}
-	100% {background: red;}
-}
-
-@-webkit-keyframes colorchange {
-	0%   {background: red;}
-	25%  {background: yellow;}
-	50%  {background: blue;}
-	75%  {background: green;}
-	100% {background: red;}
-}*/
-
 
 span {
 	color: white;
@@ -58,4 +42,3 @@ span {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-

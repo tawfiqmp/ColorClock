@@ -19,7 +19,7 @@ function app() {
 
 
         // changing background color with converting time to RGB
-        body.style['background-color']
+        body.style['background-color'] =
             "rgb(" +
             convertRGB(newTime).join(',') +
             ")";
@@ -30,7 +30,7 @@ function app() {
     function convertRGB(name) {
 
         var convert = [24, 60, 60],
-            result = [];
+            answer = [];
 
         name.forEach(function(code, index) {
             answer[index] = ~~ (code / convert[index] * 255);
@@ -45,5 +45,5 @@ function app() {
     var span = document.querySelector('span');
 
     // to run the code, setting interval to 1000ms
-    setInterval(app, 1000);
+    setInterval(refreshClock, 1000);
 }
