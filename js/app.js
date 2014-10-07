@@ -2,14 +2,13 @@ window.onload = app;
 
 function app() {
     "use strict";
-
-
+    
     function refreshClock() {
         "use strict";
         var currentTime = new Date();
         // getting the time from date function
         var time = ['getHours', 'getMinutes', 'getSeconds'];
-        // making it so that the zeroes show up in front
+        // making it so that the zeros show up in front
         var newTime = parts.map(function(timeFunction) {
         	var value = currentTime[timeFunction]();
         	return value < 10 ? "0" + value : value;
@@ -25,7 +24,9 @@ document.body.style.backgroundColor =
 	convertRGB(newTime).join(',') + 
 	")";
 
-	}	
+	}
+
+ // the actual conversion of time to RGB   	
 function convertRGB(name) {
 
 	var convert = [24, 60, 60],
@@ -38,8 +39,10 @@ function convertRGB(name) {
 	return answer;
 }
 
+// defining the variables for which I told javascript to edit an attribute such as style 
     var page = document.querySelector('body');
     var span = document.querySelector('span');
 
+// to run the code, setting interval to 1000ms
     setInterval(app, 1000);
 }
